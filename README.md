@@ -23,8 +23,8 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
 </br>
 
 Langkah pertama penyelesaian adalah memasukkan semua data yang ada pada tabel pada sebuah variabel sebagai berikut
-
-    ```R
+    
+    ```
      # Poin 1a
       before <- c(78, 75, 67, 77, 70, 72, 28, 74, 77)
       after <- c(100, 95, 70, 90, 90, 90, 89, 90, 100)
@@ -33,9 +33,9 @@ Langkah pertama penyelesaian adalah memasukkan semua data yang ada pada tabel pa
       
 Setelah dimasukkan semua datanya, maka dilakukan cek data menggunakan `data.frame` yaitu
 
-    ```R
+    ```
       my_data <- data.frame(
-          group = rep(c("sebelum", "sesudah"), each = 9),
+          group = rep(c("before", "after"), each = 9),
           saturation = c(before, after)
       )
     ```
@@ -46,21 +46,22 @@ Setelah itu dilihat hasil framenya sebagai berikut:
       print(my_data)
     ```
 
-<img width="471" alt="image" src="https://user-images.githubusercontent.com/86004023/170857804-30d65291-b431-494f-95b0-330b961cfb01.png">
+<img width="435" alt="image" src="https://user-images.githubusercontent.com/86004023/170858094-792f1a04-8114-4add-80cf-c51cdc4fcd86.png">
 
-Selanjutnya mencari standar deviasinya. Standar deviasi sebelum aktivitas adalah
-    ```R
+Selanjutnya mencari standar deviasinya. Standar deviasi sebelum dan sesudah aktivitas adalah
+    ```
+    # Standar Devisiasi before activity
     SD_before <- sd(before)
     SD_before
     ```
-
-Standar deviasi setelah aktivitas adalah
-    ```R
+    
+    ```
+    # Standar Devisiasi after activity
       SD_after <-sd(after)
       SD_after
     ```
 Maka hasilnya : 
-<img width="361" alt="Screen Shot 2022-05-29 at 14 46 35" src="https://user-images.githubusercontent.com/86004023/170857923-255c91e9-16a5-4dfb-af74-19bdaa1f383e.png">
+<img width="347" alt="image" src="https://user-images.githubusercontent.com/86004023/170858149-b2e4b403-f4a1-4515-97bd-e990edcbd699.png">
 
 </br>
 
