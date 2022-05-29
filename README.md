@@ -73,7 +73,8 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
        
       <img width="616" alt="image" src="https://user-images.githubusercontent.com/86004023/170858480-4e5c7d24-b5be-4ad1-8c0f-554450bbb4ca.png">
   
-  
+  </br>
+
    - C. Tentukanlah Apakah Terdapat Pengaruh yang Signifikan Secara Statistika dalam Hal Kadar Saturasi Oksigen, Sebelum dan Sesudah Melakukan Aktivitas 𝐴  jika Diketahui Tingkat Signifikansi 𝛼 = 5% serta H0 : “tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
        Langkah pertama yaitu melihat hasil komparasi dua variabel berikut
         ```
@@ -91,4 +92,87 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
 
       <img width="692" alt="image" src="https://user-images.githubusercontent.com/86004023/170859040-a1c6aaaa-0fe0-4834-8778-eedcf4530034.png">
 
+</br>
+
+## Soal 2
+> Diketahui bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun. Untuk menguji klaim ini, 100 pemilik mobil yang dipilih secara acak diminta untuk mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata 23.500 kilometer dan standar deviasi 3900 kilometer. (Kerjakan menggunakan 2 library seperti referensi pada modul).
+
+  - A. Apakah Anda setuju dengan klaim tersebut?
+
+    Setuju, karena
+    
+    <img width="223" alt="image" src="https://user-images.githubusercontent.com/86004023/170864898-71408114-19ec-4d85-92af-c91e08e90283.png">
+    
+    </br>
+
+  - B. Jelaskan maksud dari output yang dihasilkan!
+       Diketahui n = 100, Rata-Rata (X̄) = 23500, dan standar deviasi(σ) = 3900 Maka null hipotesis adalah
+       Maka null hipotesis adalah 
+          ```
+          H0 : μ = 20000
+          ```
+          Alternatif hipotesisnya yaitu
+          ```
+          H1 : μ > 20000
+          ```
+
+       <img width="472" alt="image" src="https://user-images.githubusercontent.com/86004023/170864744-4f24236a-662f-4b7c-a92e-c253bd78cb65.png">
        
+       </br>
+
+  - C. Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!
+  
+       Untuk mencari nilai z nya yaitu 
+       </br>
+       ![image-removebg-preview](https://user-images.githubusercontent.com/70510279/170823253-92e9ca27-09f7-4d40-a51c-9fd4392bb742.png)
+
+       Lalu mencari nilai p-value nya sebagai berikut
+               
+       ![image-removebg-preview (2)](https://user-images.githubusercontent.com/70510279/170823338-3d86d1f2-14dc-458c-af6a-eb06f0fd8333.png)
+
+       Sehingga kesimpulan yang didapat adalah bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun
+
+       </br>
+  
+## Soal 3
+> Diketahui perusahaan memiliki seorang data analyst ingin memecahkan permasalahan pengambilan keputusan dalam perusahaan tersebut. Selanjutnya didapatkanlah data berikut dari perusahaan saham tersebut.
+ ![image](https://user-images.githubusercontent.com/70510279/170834251-73d308da-69c9-4e86-b2b8-4917e598efae.png)
+   Dari data diatas berilah keputusan serta kesimpulan yang didapatkan dari hasil diatas. Asumsikan nilai variancenya sama, apakah ada perbedaan pada rata-ratanya (α= 0.05)? Buatlah :
+  A. H0 dan H1
+  B. Hitung Sampel Statistik
+  C. Lakukan Uji Statistik (df = 2) 
+  D. Nilai Kritikal
+  E. Keputusan
+  F. Kesimpulan
+
+  </br>
+  
+  - A. H0 dan H1
+    dilakukan perhitungan H0 sebagai berikut
+    </br>
+    ![image](https://user-images.githubusercontent.com/70510279/170837176-254c2846-c1b7-47c0-aa9f-c3b2e5db149a.png)
+    </br>
+    
+    dilakukan perhitungan H1 sebagai berikut
+    </br>
+    ![image](https://user-images.githubusercontent.com/70510279/170837297-542b8a9e-309b-41be-92c5-880e284beef4.png)
+    
+    </br>
+
+  - B. Hitung Sampel Statistik
+      Untuk menghitung sampel statistik dapat menggunakan fungsi `tsum.test` yaitu sebagai berikut
+
+        ```
+        tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19, mean.y =2.79 , s.y = 1.32, n.y = 27, alternative = "greater", var.equal = TRUE)
+        ```
+  
+      <img width="604" alt="image" src="https://user-images.githubusercontent.com/86004023/170865478-78c8a8b0-6542-4473-ac95-97d6a5b29471.png">
+
+  - C. Lakukan Uji Statistik (df = 2) 
+      Menggunakan bantuan library `mosaic`
+      <img width="396" alt="image" src="https://user-images.githubusercontent.com/86004023/170865651-d9e6448e-6e54-4820-89a4-b188babe3fc8.png">
+      
+      Sehingga Hasilnya sebagai berikut:
+     <img width="1118" alt="image" src="https://user-images.githubusercontent.com/86004023/170865622-20a96143-5e9d-480e-9803-896a4d94e7aa.png">
+
+  </br>
