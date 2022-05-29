@@ -42,6 +42,9 @@ t.test(before, after, mu = 0, alternative = "two.sided", var.equal = TRUE)
 install.packages("BSDA")
 library(BSDA)
 
+sum.test(mean.x = 23500, sigma.x = 3900, n.x = 100,
+          alternative = "greater", mu = 20000,
+          conf.level = 0.95)
 #Setuju
 
 # Poin 2b 
