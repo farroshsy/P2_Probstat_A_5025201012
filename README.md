@@ -44,8 +44,8 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
           print(my_data)
         ```
 
-    <img width="435" alt="image" src="https://user-images.githubusercontent.com/86004023/170858094-792f1a04-8114-4add-80cf-c51cdc4fcd86.png">
-
+     <img width="610" alt="image" src="https://user-images.githubusercontent.com/86004023/170872897-1999e0da-bf6a-497a-8ecc-bdf663aac054.png">
+     
     Selanjutnya mencari standar deviasinya. Standar deviasi sebelum dan sesudah aktivitas adalah
     
       ```
@@ -59,8 +59,8 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
        ```         
      Maka hasilnya : 
 
-     <img width="347" alt="image" src="https://user-images.githubusercontent.com/86004023/170858149-b2e4b403-f4a1-4515-97bd-e990edcbd699.png">
-
+     <img width="692" alt="image" src="https://user-images.githubusercontent.com/86004023/170872962-6a3f5d4b-280b-4801-b9b3-e8682419ae39.png">
+     
 </br>
 
    - B. carilah nilai t (p-value)
@@ -71,8 +71,8 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
        ```    
        Sehingga Hasilnya sebagai berikut:
        
-      <img width="616" alt="image" src="https://user-images.githubusercontent.com/86004023/170858480-4e5c7d24-b5be-4ad1-8c0f-554450bbb4ca.png">
-  
+       <img width="1226" alt="image" src="https://user-images.githubusercontent.com/86004023/170873001-847b7191-04ee-4c86-bac8-0f3dfa117b04.png">  
+       
   </br>
 
    - C. Tentukanlah Apakah Terdapat Pengaruh yang Signifikan Secara Statistika dalam Hal Kadar Saturasi Oksigen, Sebelum dan Sesudah Melakukan Aktivitas 𝐴  jika Diketahui Tingkat Signifikansi 𝛼 = 5% serta H0 : “tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
@@ -94,8 +94,8 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
        
       Sehingga Hasilnya sebagai berikut:
 
-      <img width="692" alt="image" src="https://user-images.githubusercontent.com/86004023/170859040-a1c6aaaa-0fe0-4834-8778-eedcf4530034.png">
-
+      <img width="1272" alt="image" src="https://user-images.githubusercontent.com/86004023/170873057-33d5548b-aebf-4cf7-9b0e-26025fdbc200.png">
+      
 </br>
 
 ## Soal 2
