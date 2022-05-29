@@ -1,6 +1,5 @@
-# Soal 1
-# 1a
-# Carilah Standar Deviasi dari data selisih pasangan pengamatan tabel diatas
+# Poin 1a
+# Carilah Standar Deviasi dari Data Selisih Pasangan Pengamatan Tabel Diatas
 
 # Data Sebelum melakukan aktivitas
 before <- c(78, 75, 67, 77, 70, 72, 28, 74, 77)
@@ -8,27 +7,27 @@ before <- c(78, 75, 67, 77, 70, 72, 28, 74, 77)
 # Data Setelah melakukan aktivitas
 after <- c(100, 95, 70, 90, 90, 90, 89, 90, 100)
 
-# Cek data
+# Check Data
 my_data <- data.frame(
-  group = rep(c("sebelum", "sesudah"), each = 9),
+  group = rep(c("before", "after"), each = 9),
   saturation = c(before, after)
 )
 
-# Di print
+# Print Data
 print(my_data)
 
-# Standar Devisiasi sebelum aktivitas
+# Standar Devisiasi before activity
 sd_before <- sd(before)
 sd_before
 
-# Standar Devisiasi setelah aktivitas
+# Standar Devisiasi after activity
 sd_after <- sd(after)
 sd_after
 
-# 1b
-# carilah nilai t (p-value)
+# Poin 1b
+# Carilah Nilai t (p-value)
 
-# Mencari nilai t(p-value) dengan t-test
+# Menggunakan t-test
 t.test(before, after, alternative = "greater", var.equal = FALSE)
 
 # 1c
