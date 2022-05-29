@@ -217,14 +217,23 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
 > Seorang Peneliti sedang meneliti spesies dari kucing di ITS . Dalam penelitiannya ia mengumpulkan data tiga spesies kucing yaitu kucing oren, kucing hitam dan kucing putih dengan panjangnya masing-masing.
 
    Jika : diketahui dataset https://intip.in/datasetprobstat1
+   
+   <img width="65" alt="image" src="https://user-images.githubusercontent.com/86004023/170869855-f39c2cbd-234f-49aa-9dbe-1402cd438b39.png">
+
    H0 : Tidak ada perbedaan panjang antara ketiga spesies atau rata-rata panjangnya sama
 
    Maka Kerjakan atau Carilah: 
+   
     A. Buatlah masing masing jenis spesies menjadi 3 subjek "Grup" (grup 1, grup 2, grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan lihat apakah ada outlier utama dalam homogenitas varians.
+    
     B. Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang didapatkan? Apa hipotesis dan kesimpulan yang dapat diambil?
+    
     C. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
+    
     D. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan dari H0?
+    
     E. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan.
+    
     F. Visualisasikan data dengan ggplot2
     
    </br>
