@@ -71,5 +71,5 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
        ```    
        Sehingga Hasilnya sebagai berikut:
        
-   <img width="616" alt="image" src="https://user-images.githubusercontent.com/86004023/170858480-4e5c7d24-b5be-4ad1-8c0f-554450bbb4ca.png">
-
+      <img width="616" alt="image" src="https://user-images.githubusercontent.com/86004023/170858480-4e5c7d24-b5be-4ad1-8c0f-554450bbb4ca.png">
+  
