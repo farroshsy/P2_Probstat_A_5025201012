@@ -133,6 +133,9 @@ ggplot(dataoneway, aes(x = Group, y = Length)) + geom_boxplot(fill = "grey80", c
 # Buatlah plot sederhana untuk visualisasi data
 
 install.packages("multcompView")
+install.packages("ggplot2")
+install.packages("readr")
+install.packages("dplyr")
 library(readr)
 library(ggplot2)
 library(multcompView)
