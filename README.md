@@ -247,61 +247,83 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
      Langkah pertama mengambil data dari link yang telah disediadakan
 
       ```
-        myFile  <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt")) 
-        dim(myFile)
-        head(myFile)
+       dataoneway <- read.table("onewayanova.txt",h=T)
+       attach(dataoneway)
+       names(dataoneway)
       ```
-      <img width="167" alt="image" src="https://user-images.githubusercontent.com/86004023/170866715-540535c8-7d2f-44f9-8a7e-79182e6e02c5.png">
-
+    
       Selanjutnya membuat myFile menjadi group 
       
       ```
-        myFile$Group <- as.factor(myFile$Group)
-        myFile$Group = factor(myFile$Group,labels = c("Kucing Oren","Kucing Hitam","Kucing Putih"))
+        dataoneway$Group <- as.factor(dataoneway$Group)
+        dataoneway$Group = factor(dataoneway$Group,labels = c("Grup 1", "Grup 2", "Grup 3"))
+
       ```
 
       Setelah itu, dicek apakah dia menyimpan nilai di groupnya
       
       ```
-        class(myFile$Group)
+        class(dataoneway$Group)
       ```
 
       Lalu bagi tiap valuer menjadi 3 bagian ke 3 grup
       
       ```
-        group1 <- subset(myFile, Group=="Kucing Oren")
-        group2 <- subset(myFile, Group=="Kucing Hitam")
-        group3 <- subset(myFile, Group=="Kucing Putih")
+        Group1 <- subset(dataoneway, Group == "Grup 1")
+        Group2 <- subset(dataoneway, Group == "Grup 2")
+        Group3 <- subset(dataoneway, Group == "Grup 3")
+
+        qqnorm(Group1$Length)
+        qqline(Group1$Length)
+
+        qqnorm(Group2$Length)
+        qqline(Group2$Length)
+
+        qqnorm(Group2$Length)
+        qqline(Group2$Length)
       ```
-      
+
       </br>
+      
+      Sehingga Hasilnya sebagai berikut:
+
+      <img width="786" alt="image" src="https://user-images.githubusercontent.com/86004023/170870831-84d7d058-7ced-45e5-9cd1-215a440afce0.png">
+
 
    - B. Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang didapatkan? Apa hipotesis dan kesimpulan yang dapat diambil?
 
         Mencari Homogeneity of variances bisa menggunakan command sebagai berikut
         
         ```
-        bartlett.test(Length~Group, data=dataoneway)
+          bartlett.test(Length ~ Group, data = dataoneway)
         ```
         
         Didapatkan nilai dari p-value yaitu = 0.8054. 
         Kesimpulan yang didapatkan yaitu Bartlett's K-squared memiliki nilai sebesar 0.43292 dan df bernilai 2
+        
+        Sehingga Hasilnya sebagai berikut:
+
+        <img width="608" alt="image" src="https://user-images.githubusercontent.com/86004023/170871015-41c0838b-197e-4cf9-ad70-4b9fecdb8414.png">
+
       
    - C. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
         Mencari Homogeneity of variances bisa menggunakan command sebagai berikut
         
         ```
-        qqnorm(group1$Length)
-        qqline(group1$Length)
+         model1 = lm(Length ~ Group, data = dataoneway)
+         anova(model1)
         ```
+        
+        Sehingga Hasilnya sebagai berikut:
 
-        ![image](https://user-images.githubusercontent.com/70510279/170848819-3b70668f-ba55-4d57-b297-a14cb7d7218a.png)
+        <img width="681" alt="image" src="https://user-images.githubusercontent.com/86004023/170871118-50c6c66e-c9b1-4873-94f4-688c012340ad.png">        
         
         </br>
 
    - D. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan dari H0?
         
         Didapatkan nilai dari p-value yaitu = 0.8054. 
+        Maka dapat disimpulkan bahwa H0 ditolak.
         
         </br>
    
@@ -323,6 +345,11 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
         TukeyHSD(aov(model1))
         ```
         </br>
+        
+        Sehingga Hasilnya sebagai berikut:
+
+        <img width="615" alt="image" src="https://user-images.githubusercontent.com/86004023/170871161-3a9a1a94-1302-4eed-a7ca-9bfe3c4eee24.png">
+
 
    - F. Visualisasikan data dengan ggplot2
   
@@ -330,6 +357,10 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
         library(ggplot2)
         ggplot(dataoneway, aes(x = Group, y = Length)) + geom_boxplot(fill = "grey80", colour = "black") + scale_x_discrete() + xlab("Treatment Group") +  ylab("Length (cm)")
         ```
+       Sehingga Hasilnya sebagai berikut:
+
+      <img width="1210" alt="image" src="https://user-images.githubusercontent.com/86004023/170870866-4728bf66-3c96-4618-b24e-1c0fbcfa18df.png">
+
         
         </br>
 
