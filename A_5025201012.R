@@ -108,63 +108,23 @@ qqline(Group2$Length)
 qqnorm(Group3$Length)
 qqline(Group3$Length)
 
-#b) Mencari homogenity of variances
+# Poin 4b
+# Mencari homogenity of variances
 bartlett.test(Length ~ Group, data = dataoneway)
 
-#One Way ANOVA - Test if the means of the k populations are equal
-#c) Uji anova satu arah
+# Poin 4c 
+# Uji anova satu arah
 model1 = lm(Length ~ Group, data = dataoneway)
 anova(model1)
 
-#d) nilai p adalah 0.8054, maka H0 ditolak
-
-#e) Post-hoc test Tukey HSD
-TukeyHSD(aov(model1))
-# hasil dari test post-hoc model 1 adalah grup 1 lebih panjang
-# dari grup yang lain
-#Data visualisation
-
-
-
-
-
-
-myFile  <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"))
-dim(myFile)
-head(myFile)
-attach(myFile)
-
-myFile$V1 <- as.factor(myFile$V1)
-myFile$V1 = factor(myFile$V1,labels = c("Kucing Oren","Kucing Hitam","Kucing Putih","Kucing Oren"))
-
-class(myFile$V1)
-
-group1 <- subset(myFile, V1=="Kucing Oren")
-group2 <- subset(myFile, V1=="Kucing Hitam")
-group3 <- subset(myFile, V1=="Kucing Putih")
-
-# Poin 4b
-# carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?
-bartlett.test(Length~V1, data=dataoneway)
-
-# Poin 4c
-# Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
-qqnorm(group1$Length)
-qqline(group1$Length)
-
-# Poin 4d
-# Didapatkan nilai dari p-value yaitu = 0.8054. 
+# Poin 4d 
+# nilai p adalah 0.8054, maka H0 ditolak
 
 # Poin 4e
-# Verifikasilah model 1 dengan Post-hoc test Tukey HSD
-
-model1 <- lm(Length~Group, data=myFile)
-
-anova(model1)
-
+# Post-hoc test Tukey HSD
 TukeyHSD(aov(model1))
 
-# Soal 4f
+# Poin 4f
 # Visualisasikan data dengan ggplot2
 
 library(ggplot2)
