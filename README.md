@@ -103,9 +103,9 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
 
   - A. Apakah Anda setuju dengan klaim tersebut?
 
-    Setuju, karena
+    Setuju, karena kesimpulan dari uji z menolak H0, sehingga mobil dikemudikan memiliki rata-rata lebih dari 20000 kilometer per tahun
     
-    <img width="223" alt="image" src="https://user-images.githubusercontent.com/86004023/170864898-71408114-19ec-4d85-92af-c91e08e90283.png">
+    <img width="599" alt="image" src="https://user-images.githubusercontent.com/86004023/170872041-a7cbbf8a-bf24-4190-a9b5-c6236cbbfd73.png">
     
     </br>
 
@@ -134,7 +134,7 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
                
        ![image-removebg-preview (2)](https://user-images.githubusercontent.com/70510279/170823338-3d86d1f2-14dc-458c-af6a-eb06f0fd8333.png)
 
-       Sehingga kesimpulan yang didapat adalah bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun
+       Sehingga kesimpulan yang didapat adalah bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun, dari hasil p-value tersebut hipotesis awal dapat ditolak dan H1 diterima
 
        </br>
   
