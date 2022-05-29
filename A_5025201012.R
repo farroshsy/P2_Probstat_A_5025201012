@@ -86,6 +86,49 @@ qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 # Poin 4a
 # Buatlah masing masing jenis spesies menjadi 3 subjek "Grup" (grup 1, grup 2, grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan lihat apakah ada outlier utama dalam homogenitas varians.
 
+dataoneway <- read.table("onewayanova.txt",h=T)
+attach(dataoneway)
+names(dataoneway)
+
+dataoneway$Group <- as.factor(dataoneway$Group)
+dataoneway$Group = factor(dataoneway$Group,labels = c("grup 1", "grup 2", "grup 3"))
+
+class(dataoneway$Group)
+
+Group1 <- subset(dataoneway, Group == "grup 1")
+Group2 <- subset(dataoneway, Group == "grup 2")
+Group3 <- subset(dataoneway, Group == "grup 3")
+
+qqnorm(Group1$Length)
+qqline(Group1$Length)
+
+qqnorm(Group2$Length)
+qqline(Group2$Length)
+
+qqnorm(Group3$Length)
+qqline(Group3$Length)
+
+#b) Mencari homogenity of variances
+bartlett.test(Length ~ Group, data = dataoneway)
+
+#One Way ANOVA - Test if the means of the k populations are equal
+#c) Uji anova satu arah
+model1 = lm(Length ~ Group, data = dataoneway)
+anova(model1)
+
+#d) nilai p adalah 0.8054, maka H0 ditolak
+
+#e) Post-hoc test Tukey HSD
+TukeyHSD(aov(model1))
+# hasil dari test post-hoc model 1 adalah grup 1 lebih panjang
+# dari grup yang lain
+#Data visualisation
+
+
+
+
+
+
 myFile  <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"))
 dim(myFile)
 head(myFile)
