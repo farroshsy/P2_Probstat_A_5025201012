@@ -14,7 +14,7 @@ Praktikum Probabilitas dan Statistik 2022 Modul 2 (Distribusi Probabilitas)
 ## Soal 1
 > Seorang peneliti melakukan penelitian mengenai pengaruh aktivitas 𝐴 terhadap kadar saturasi oksigen pada manusia. Peneliti tersebut mengambil sampel sebanyak 9 responden. Pertama, sebelum melakukan aktivitas 𝐴, peneliti mencatat kadar saturasi oksigen dari 9 responden tersebut. Kemudian, 9 responden tersebut diminta melakukan aktivitas 𝐴. Setelah 15 menit, peneliti tersebut mencatat kembali kadar saturasi oksigen dari 9 responden tersebut. Berikut data dari 9 responden mengenai kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas 𝐴
 
-![soal 1](https://user-images.githubusercontent.com/70510279/170801862-fb8feada-e470-4bdd-90c8-2b1b050563ca.jpg)
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/86004023/170870199-023ddc4f-4947-4ee6-ba23-89a8f4c5b54e.png">
 
 Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari responden ke-3 ketika belum melakukan aktivitas 𝐴 sebanyak 67, dan setelah melakukan aktivitas 𝐴 sebanyak 70.
 
@@ -77,17 +77,21 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
 
    - C. Tentukanlah Apakah Terdapat Pengaruh yang Signifikan Secara Statistika dalam Hal Kadar Saturasi Oksigen, Sebelum dan Sesudah Melakukan Aktivitas 𝐴  jika Diketahui Tingkat Signifikansi 𝛼 = 5% serta H0 : “tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
        Langkah pertama yaitu melihat hasil komparasi dua variabel berikut
+       
         ```
          var.test(before, after)
        ```    
+       
        Sehingga Hasilnya sebagai berikut:
        
        <img width="593" alt="image" src="https://user-images.githubusercontent.com/86004023/170858996-31f369f7-66ad-4279-9b12-2562a1f0e027.png">
        
-       Selanjutnya, untuk melihat pengaruh jika tingkat signifikasi 5% dan tidak ada pengaruh yang signifikan secara statistika, maka adalah sebagai berikut
+       Selanjutnya, untuk melihat pengaruh jika tingkat signifikasi 5% dan tidak ada pengaruh yang signifikan secara statistika. karena nilai p-value lebih kecil dari nilai tingkat signifikansi nya maka h0 "tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen, sebelum dan sesudah melakukan aktivitas 𝐴" salah. Sehingga dapat ditampilkan sebagai berikut
+       
        ```
          t.test(before, after, mu = 0, alternative = "two.sided", var.equal = TRUE)
        ```  
+       
       Sehingga Hasilnya sebagai berikut:
 
       <img width="692" alt="image" src="https://user-images.githubusercontent.com/86004023/170859040-a1c6aaaa-0fe0-4834-8778-eedcf4530034.png">
