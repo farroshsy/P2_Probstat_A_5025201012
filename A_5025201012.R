@@ -2,7 +2,7 @@
 # Carilah Standar Deviasi dari Data Selisih Pasangan Pengamatan Tabel Diatas
 
 # Data Sebelum melakukan aktivitas
-before <- c(78, 75, 67, 77, 70, 72, 28, 74, 77)
+before <- c(78, 75, 67, 77, 70, 72, 78, 74, 77)
 
 # Data Setelah melakukan aktivitas
 after <- c(100, 95, 70, 90, 90, 90, 89, 90, 100)
