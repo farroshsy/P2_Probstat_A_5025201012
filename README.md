@@ -24,7 +24,7 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
 
         ```
          # Poin 1a
-          before <- c(78, 75, 67, 77, 70, 72, 28, 74, 77)
+          before <- c(78, 75, 67, 77, 70, 72, 78, 74, 77)
           after <- c(100, 95, 70, 90, 90, 90, 89, 90, 100)
 
         ```  
