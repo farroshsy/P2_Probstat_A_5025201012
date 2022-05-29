@@ -73,3 +73,22 @@ Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari respon
        
       <img width="616" alt="image" src="https://user-images.githubusercontent.com/86004023/170858480-4e5c7d24-b5be-4ad1-8c0f-554450bbb4ca.png">
   
+  
+   - C. Tentukanlah Apakah Terdapat Pengaruh yang Signifikan Secara Statistika dalam Hal Kadar Saturasi Oksigen, Sebelum dan Sesudah Melakukan Aktivitas 𝐴  jika Diketahui Tingkat Signifikansi 𝛼 = 5% serta H0 : “tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
+       Langkah pertama yaitu melihat hasil komparasi dua variabel berikut
+        ```
+         var.test(before, after)
+       ```    
+       Sehingga Hasilnya sebagai berikut:
+       
+       <img width="593" alt="image" src="https://user-images.githubusercontent.com/86004023/170858996-31f369f7-66ad-4279-9b12-2562a1f0e027.png">
+       
+       Selanjutnya, untuk melihat pengaruh jika tingkat signifikasi 5% dan tidak ada pengaruh yang signifikan secara statistika, maka adalah sebagai berikut
+       ```
+         t.test(before, after, mu = 0, alternative = "two.sided", var.equal = TRUE)
+       ```  
+      Sehingga Hasilnya sebagai berikut:
+
+      <img width="692" alt="image" src="https://user-images.githubusercontent.com/86004023/170859040-a1c6aaaa-0fe0-4834-8778-eedcf4530034.png">
+
+       
